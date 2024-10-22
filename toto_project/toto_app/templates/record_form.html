@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if form.instance.id %}Modifier{% else %}Créer{% endif %} un Enregistrement</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <h1>{% if form.instance.id %}Modifier{% else %}Créer{% endif %} un Enregistrement</h1>
+    <form method="post">  <!-- Formulaire pour créer ou modifier un enregistrement -->
+        {% csrf_token %}  <!-- Protection CSRF -->
+        {{ form.as_p }}  <!-- Affiche les champs du formulaire -->
+        <button type="submit">Enregistrer</button>  <!-- Bouton pour soumettre le formulaire -->
+    </form>
+    <a href="{% url 'record_list' %}">Retour à la liste</a> <!-- Lien pour revenir à la liste des enregistrements -->
+</body>
+</html>

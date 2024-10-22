@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Enregistrements</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <h1>Liste des Enregistrements</h1>
+    <a href="{% url 'record_create' %}">Créer un nouvel enregistrement</a> <!-- Lien vers la création d'un enregistrement -->
+    <ul>
+        {% for record in records %}
+            <li>
+                {{ record.title }} - {{ record.created_at }} <!-- Affichage du titre et de la date de création -->
+                <a href="{% url 'record_update' record.id %}">Modifier</a> <!-- Lien pour modifier l'enregistrement -->
+                <a href="{% url 'record_delete' record.id %}">Supprimer</a> <!-- Lien pour supprimer l'enregistrement -->
+            </li>
+        {% empty %}
+            <li>Aucun enregistrement trouvé.</li> <!-- Message si aucun enregistrement -->
+        {% endfor %}
+    </ul>
+</body>
+</html>

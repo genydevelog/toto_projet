@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;  /* Police de caractères */
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;  /* Couleur de fond */
+}
+
+/* Styles pour les titres */
+h1 {
+    color: #333;  /* Couleur du titre */
+}
+
+/* Styles pour les listes */
+ul {
+    list-style-type: none;  /* Suppression des puces */
+    padding: 0;
+}
+
+li {
+    background: #fff;  /* Couleur de fond des éléments de la liste */
+    margin: 5px 0;  /* Marge entre les éléments */
+    padding: 10px;  /* Espacement interne */
+    border-radius: 5px;  /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Ombre */
+}
+
+/* Styles pour les boutons */
+button {
+    background-color: #28a745;  /* Couleur de fond du bouton */
+    color: white;  /* Couleur du texte */
+    border: none;  /* Pas de bordure */
+    padding: 10px 15px;  /* Espacement interne */
+    border-radius: 5px;  /* Coins arrondis */
+    cursor: pointer;  /* Curseur en forme de main */
+}
+
+button:hover {
+    background-color: #218838;  /* Couleur de fond au survol */
+}
+
+/* Styles pour les liens */
+a {
+    color: #007bff;  /* Couleur des liens */
+    text-decoration: none;  /* Pas de soulignement */
+}
+
+a:hover {
+    text-decoration: underline;  /* Soulignement au survol */
+}
